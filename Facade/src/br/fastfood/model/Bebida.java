@@ -18,16 +18,24 @@ public class Bebida implements ItemCombo {
         return preco;
     }
 
-    public static Bebida refrigerante(){
+    public static Bebida cocaCola() {
         return new Bebida("Coca Cola", 5.00);
     }
 
-    public static Bebida sucoDeLaranja(){
+    public static Bebida sucoDeLaranja() {
         return new Bebida("Suco de Laranja", 7.00);
+    }
+
+    public static Bebida sucoDeUva() {
+        return new Bebida("Suco de Uva", 7.00);
+    }
+
+    public static Bebida chaGelado() {
+        return new Bebida("Cha Gelado", 9.00);
     }
 
     @Override
     public String toString() {
-        return nome + "R$ " + preco;
+        return nome + "R$" + preco;
     }
 }

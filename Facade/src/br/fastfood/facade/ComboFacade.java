@@ -11,8 +11,10 @@ public class ComboFacade {
 
     public void criarCombo(int codigo) {
         switch (codigo) {
-            case 1 -> combo = new Combo(Burger.bigCheddar(), Bebida.refrigerante(), Sobremesa.sorvete());
+            case 1 -> combo = new Combo(Burger.bigCheddar(), Bebida.cocaCola(), Sobremesa.sorvete());
             case 2 -> combo = new Combo(Burger.bigTasty(), Bebida.sucoDeLaranja(), Sobremesa.torta());
+            case 3 -> combo = new Combo(Burger.xBurger(), Bebida.sucoDeUva(), Sobremesa.mousseDeChocolate());
+            case 4 -> combo = new Combo(Burger.sanduicheNatural(), Bebida.chaGelado(), Sobremesa.cookie());
             default -> System.out.println("Combo inexistente.");
         }
     }
@@ -20,9 +22,9 @@ public class ComboFacade {
     public void exibirItens() {
         if (combo != null) {
             System.out.println("\n=== Itens do Combo ===");
-            System.out.println("1 - " + combo.getBurger().getNome() + " - R$" + combo.getBurger().getPreco());
-            System.out.println("2 - " + combo.getBebida().getNome() + " - R$" + combo.getBebida().getPreco());
-            System.out.println("3 - " + combo.getSobremesa().getNome() + " - R$" + combo.getSobremesa().getPreco());
+            System.out.println("1 - " + combo.getBurger().getNome() + "........R$" + combo.getBurger().getPreco());
+            System.out.println("2 - " + combo.getBebida().getNome() + "........R$" + combo.getBebida().getPreco());
+            System.out.println("3 - " + combo.getSobremesa().getNome() + "........R$" + combo.getSobremesa().getPreco());
         } else {
             System.out.println("Nenhum combo criado.");
         }
